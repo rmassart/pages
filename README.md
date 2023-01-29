@@ -1,3 +1,2 @@
-# html-examples
+# pages
 
-Just a place for me to store some HTML examples
