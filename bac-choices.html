@@ -313,7 +313,18 @@
                     document.getElementById(aOralRadios[i]).disabled = false;
                     document.getElementById(aOralRadios[i]).checked = false;
                 }
-                
+
+                //============================
+                //Languages
+                //============================
+                if (document.getElementById("AL1").checked){
+                    document.getElementById("L1_W").innerText = "Advanced L1"
+                    document.getElementById("L1_O").innerText = "Advanced L1"
+                }
+                if (document.getElementById("AL2").checked){
+                    document.getElementById("L2_W").innerText = "Advanced L2"
+                }
+
                 //============================
                 //Maths
                 //============================
