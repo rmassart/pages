@@ -569,12 +569,15 @@
             function retrieveData(){
                 const form = document.getElementById('choices');
                 for (const element of form.elements) {
-                    if(element.type == "radio" || element.type == "checkbox") {
-                        //alert(localStorage.getItem(element.id));
-                        element.checked = eval(localStorage.getItem(element.id));
-                    }
-                    else {
-                        element.value = localStorage.getItem(element.id);
+                    //check item exists in localstorage before setting
+                    if(!(localStorage.getItem(element.id) === null)){
+                        if(element.type == "radio" || element.type == "checkbox") {
+                            //alert(localStorage.getItem(element.id));
+                            element.checked = eval(localStorage.getItem(element.id));
+                        }
+                        else {
+                            element.value = localStorage.getItem(element.id);
+                        }
                     }
                 }
                 updateTotals();
